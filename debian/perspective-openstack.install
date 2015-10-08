@@ -1,3 +1,4 @@
 perspective-openstack/target/lib usr/share/perspective/perspective-openstack
 perspective-openstack/target/perspective-openstack.jar usr/share/perspective/perspective-openstack
-etc/perspective/openstack.properties etc/perspective
+etc/perspective/openstack/worker.properties etc/perspective/openstack
+etc/perspective/openstack/log4j.properties etc/perspective/openstack

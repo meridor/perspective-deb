@@ -1,3 +1,4 @@
 perspective-rest/target/perspective-rest.war usr/share/perspective/perspective-rest
 perspective-rest/target/jetty-runner.jar usr/share/perspective/perspective-rest
-etc/perspective/rest.properties etc/perspective
+etc/perspective/rest/rest.properties etc/perspective/rest
+etc/perspective/rest/log4j.properties etc/perspective/rest

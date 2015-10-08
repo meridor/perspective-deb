@@ -1,3 +1,4 @@
 perspective-docker/target/lib usr/share/perspective/perspective-docker
 perspective-docker/target/perspective-docker.jar usr/share/perspective/perspective-docker
-etc/perspective/docker.properties etc/perspective
+etc/perspective/docker/worker.properties etc/perspective/docker
+etc/perspective/docker/log4j.properties etc/perspective/docker
