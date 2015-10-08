@@ -9,12 +9,14 @@ ifeq ($(strip $(IS_SNAPSHOT)),SNAPSHOT)
     VERSION := $(VERSION)-SNAPSHOT
 endif
 
-DEB_DH_INSTALLINIT_ARGS := --no-start
-
 JAVA_HOME := $(shell update-alternatives --query javac | grep Best: | cut -d " " -f2 | sed 's|/bin/javac||')
 
+
+override_dh_installinit:
+	dh_installinit --no-start
+
 build:
-	MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m" mvn -Dversion=${VERSION} -DskipTests=true -Dmaven.repo.local=${HOME}/.m2/repository clean package
+	mvn -Dversion=${VERSION} -DskipTests=true -Dmaven.repo.local=${HOME}/.m2/repository clean package
 	mv perspective-rest/target/perspective-rest-${VERSION}.war perspective-rest/target/perspective-rest.war
 	mv perspective-storage/target/perspective-storage-${VERSION}.jar perspective-storage/target/perspective-storage.jar
 	mv perspective-openstack/target/perspective-openstack-${VERSION}.jar perspective-openstack/target/perspective-openstack.jar

@@ -13,6 +13,14 @@
 
     <url>http://meridor.org</url>
 
+    <modules>
+        <module>perspective-storage</module>
+        <module>perspective-rest</module>
+        <module>perspective-docker</module>
+        <module>perspective-openstack</module>
+        <module>perspective-shell</module>
+    </modules>
+
     <properties>
        <perspective.version>${version}</perspective.version>
     </properties>
