@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+#DEBHELPER#
+
+case "$1" in
+    configure|upgrade)
+
+        # create symlink for upstart autocomplete 
+        if [ -e /lib/init/upstart-job ]; then
+        	ln -s /lib/init/upstart-job /etc/init.d/perspective-storage
+        fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0

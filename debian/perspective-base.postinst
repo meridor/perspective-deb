@@ -1,0 +1,35 @@
+#!/bin/sh
+set -e
+
+#DEBHELPER#
+
+case "$1" in
+    configure|upgrade)
+
+        # Create user if it doesn't exist.
+        if ! id perspective > /dev/null 2>&1 ; then
+            adduser --system --no-create-home --disabled-password --disabled-login --group --home /var/run/perspective perspective
+        fi
+
+        # check exist log dir
+        if [ -d /var/log/perspective ]; then
+            chown -R perspective:adm /var/log/perspective
+        fi
+
+        # check exist pid dir
+        if [ -d /var/run/perspective ]; then
+            chown -R perspective:adm /var/run/perspective
+        fi
+
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0

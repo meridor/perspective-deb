@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+PACKAGE := $(DEB_SOURCE_PACKAGE)
+VERSION := $(shell dpkg-parsechangelog | sed -ne 's/^Version: \([0-9.]*\).*/\1/p')
+IS_SNAPSHOT := $(shell dpkg-parsechangelog | sed -ne 's/^Version: .*\(SNAPSHOT\).*/\1/p')
+ifeq ($(strip $(IS_SNAPSHOT)),SNAPSHOT)
+    VERSION := $(VERSION)-SNAPSHOT
+endif
+
+DEB_DH_INSTALLINIT_ARGS := --no-start
+
+JAVA_HOME := $(shell update-alternatives --query javac | grep Best: | cut -d " " -f2 | sed 's|/bin/javac||')
+
+build:
+	MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m" mvn -Dversion=${VERSION} -DskipTests=true -Dmaven.repo.local=${HOME}/.m2/repository clean package
+	mv perspective-rest/target/perspective-rest-${VERSION}.war perspective-rest/target/perspective-rest.war
+	mv perspective-storage/target/perspective-storage-${VERSION}.jar perspective-storage/target/perspective-storage.jar
+	mv perspective-openstack/target/perspective-openstack-${VERSION}.jar perspective-openstack/target/perspective-openstack.jar
+	mv perspective-docker/target/perspective-docker-${VERSION}.jar perspective-docker/target/perspective-docker.jar
+	mv perspective-shell/target/perspective-shell-${VERSION}.jar perspective-shell/target/perspective-shell.jar
+
+clean::
+	mvn -Dversion=${VERSION} -Dmaven.repo.local=${HOME}/.m2/repository clean

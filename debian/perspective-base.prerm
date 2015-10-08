@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+
+if ! id perspective > /dev/null 2>&1 ; then
+    deluser --remove-all-files perspective
+fi

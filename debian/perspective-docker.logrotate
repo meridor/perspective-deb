@@ -1,0 +1,10 @@
+/var/log/perspective/perspective-docker.log {
+        daily
+        missingok
+        rotate 7
+        compress
+        delaycompress
+        create 644 perspective adm
+        sharedscripts
+        copytruncate
+}

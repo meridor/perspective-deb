@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+description "perspective-storage"
+
+start on runlevel [2345]
+stop on runlevel [06]
+
+limit nofile 4096 4096
+setuid perspective
+
+script
+    GC_OPTS="-XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled"
+    MEMORY_OPTS="-Xmx256m"
+
+    JAVA_ARGS="$GC_OPTS $MEMORY_OPTS -Xbootclasspath/a:/etc/perspective"
+
+    java $JAVA_ARGS -jar /usr/share/perspective/perspective-storage/perspective-storage.jar >> /var/log/perspective/perspective-storage.log 2>&1
+end script

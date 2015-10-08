@@ -1,0 +1,42 @@
+Source: perspective-backend
+Section: misc
+Priority: extra
+Maintainer: Ivan Krutov <vania-pooh@meridor.org>
+Standards-Version: 3.9.2
+Build-Depends: cdbs, debhelper (>= 7.0.50~)
+Vcs-Git: git://github.com:meridor/perspective-backend.git
+
+Package: perspective-base
+Architecture: all
+Depends: java8-jdk | java8-runtime | java8-runtime-headless | java8-sdk | sun-java8-jdk
+Description: Perspective base configuration package
+
+Package: perspective-rest
+Architecture: all
+Depends: perspective-base (= ${binary:Version})
+Description: Perspective REST API daemon
+
+Package: perspective-storage
+Architecture: all
+Depends: perspective-base (= ${binary:Version})
+Description: Perspective storage module
+
+Package: perspective-openstack-worker
+Architecture: all
+Depends: java8-jdk | java8-runtime | java8-runtime-headless | java8-sdk | sun-java8-jdk
+Description: Perspective Openstack Worker daemon
+
+Package: perspective-docker-worker
+Architecture: all
+Depends: java8-jdk | java8-runtime | java8-runtime-headless | java8-sdk | sun-java8-jdk
+Description: Perspective REST API daemon
+
+Package: perspective-shell
+Architecture: all
+Depends: java8-jdk | java8-runtime | java8-runtime-headless | java8-sdk | sun-java8-jdk
+Description: Perspective interactive shell
+
+Package: perspective-frontend-nginx-config
+Architecture: all
+Depends: nginx
+Description: Perspective Frontend Nginx config
