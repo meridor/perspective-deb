@@ -6,7 +6,7 @@
 
     <groupId>org.meridor.perspective</groupId>
     <artifactId>perspective-deb</artifactId>
-    <version>${perspective.version}</version>
+    <version>1.0</version>
     <packaging>pom</packaging>
 
     <name>Perspective Backend Debian Package</name>
@@ -22,7 +22,7 @@
     </modules>
 
     <properties>
-       <perspective.version>${version}</perspective.version>
+        <perspective.version>${version}</perspective.version>
     </properties>
 
     <build>
@@ -41,9 +41,6 @@
                             </goals>
                             <configuration>
                                 <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                                <overWriteReleases>false</overWriteReleases>
-                                <overWriteSnapshots>false</overWriteSnapshots>
-                                <overWriteIfNewer>true</overWriteIfNewer>
                             </configuration>
                         </execution>
                     </executions>
