@@ -1,3 +1,3 @@
-storage/target/lib usr/share/perspective/perspective-storage
-storage/target/perspective-storage.jar usr/share/perspective/perspective-storage
-conf/storage.properties etc/perspective
+perspective-storage/target/lib usr/share/perspective/perspective-storage
+perspective-storage/target/perspective-storage.jar usr/share/perspective/perspective-storage
+etc/perspective/storage.properties etc/perspective
