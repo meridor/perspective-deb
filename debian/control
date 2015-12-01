@@ -21,12 +21,12 @@ Architecture: all
 Depends: perspective-base (= ${binary:Version})
 Description: Perspective storage module
 
-Package: perspective-openstack-worker
+Package: perspective-openstack
 Architecture: all
 Depends: java8-jdk | java8-runtime | java8-runtime-headless | java8-sdk | sun-java8-jdk
 Description: Perspective Openstack Worker daemon
 
-Package: perspective-docker-worker
+Package: perspective-docker
 Architecture: all
 Depends: java8-jdk | java8-runtime | java8-runtime-headless | java8-sdk | sun-java8-jdk
 Description: Perspective REST API daemon
