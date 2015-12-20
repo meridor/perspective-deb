@@ -2,6 +2,7 @@
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 
+ifdef BUILD_PACKAGE
 PACKAGE := $(DEB_SOURCE_PACKAGE)
 VERSION := $(shell dpkg-parsechangelog | sed -ne 's/^Version: \([0-9.]*\).*/\1/p')
 IS_SNAPSHOT := $(shell dpkg-parsechangelog | sed -ne 's/^Version: .*\(SNAPSHOT\).*/\1/p')
@@ -16,12 +17,8 @@ override_dh_installinit:
 	dh_installinit --no-start
 
 build:
-	mvn -Dversion=${VERSION} -DskipTests=true -Dmaven.repo.local=${HOME}/.m2/repository clean package
-	mv perspective-rest/target/lib/perspective-rest-${VERSION}.war perspective-rest/target/perspective-rest.war
-	mv perspective-storage/target/lib/perspective-storage-${VERSION}.jar perspective-storage/target/perspective-storage.jar
-	mv perspective-openstack/target/lib/perspective-openstack-${VERSION}.jar perspective-openstack/target/perspective-openstack.jar
-	mv perspective-docker/target/lib/perspective-docker-${VERSION}.jar perspective-docker/target/perspective-docker.jar
-	mv perspective-shell/target/lib/perspective-shell-${VERSION}.jar perspective-shell/target/perspective-shell.jar
+	scripts/build.sh ${VERSION} ${HOME}
 
 clean::
-	mvn -Dversion=${VERSION} -Dmaven.repo.local=${HOME}/.m2/repository clean
+	scripts/clean.sh ${VERSION} ${HOME}
+endif
