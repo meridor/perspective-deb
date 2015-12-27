@@ -1,3 +1,9 @@
+perspective-backend (1.1.4-2) trusty; urgency=medium
+
+  * Added missing storage backup count property
+
+ -- Krutov Ivan <vania-pooh@meridor.org>  Sun, 27 Dec 2015 15:59:22 +0300
+ 
 perspective-backend (1.1.4-1) trusty; urgency=medium
 
   * Release 1.1.4
