@@ -13,4 +13,5 @@ $ BUILD_PACKAGE=true debuild --no-tgz-check --no-lintian --preserve-envvar JAVA_
 ## Build source package for Launchpad
 ```bash
 $ scripts/prepare-source-package.sh
+$ dput ppa:meridor/perspective ../perspective-backend_<version>_source.changes
 ```
