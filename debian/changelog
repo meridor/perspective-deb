@@ -1,3 +1,9 @@
+perspective-backend (1.1.6-1) trusty; urgency=medium
+
+  * Release 1.1.6
+
+ -- Krutov Ivan <vania-pooh@meridor.org>  Sat, 13 Feb 2016 23:00:33 +0300
+ 
 perspective-backend (1.1.5-1) trusty; urgency=medium
 
   * Release 1.1.5
