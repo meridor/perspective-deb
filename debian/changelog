@@ -1,3 +1,9 @@
+perspective-backend (1.3.0-RC1-1) trusty; urgency=medium
+
+  * Release candidate 1.3.0-RC1
+
+ -- Krutov Ivan <vania-pooh@meridor.org>  Sat, 23 July 2016 22:45:33 +0300
+ 
 perspective-backend (1.2.2-1) trusty; urgency=medium
 
   * Release  1.2.2
