@@ -1,3 +1,4 @@
+perspective-rest/target/lib usr/share/perspective/perspective-rest
 perspective-rest/target/perspective-rest.jar usr/share/perspective/perspective-rest
 etc/perspective/rest/rest.properties etc/perspective/rest
 etc/perspective/rest/log4j.properties etc/perspective/rest
