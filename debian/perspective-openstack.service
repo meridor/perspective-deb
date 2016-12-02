@@ -1,0 +1,11 @@
+[Unit]
+Description=Perspective Openstack Worker
+
+[Service]
+Type=forking
+User perspective
+LimitNOFILE 4096
+ExecStart=/usr/share/perspective/perspective-openstack/start.sh
+
+[Install]
+WantedBy=multi-user.target

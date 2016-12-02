@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-description "perspective-openstack"
+description "perspective-digital-ocean"
 
 start on runlevel [2345]
 stop on runlevel [06]
@@ -8,4 +8,4 @@ stop on runlevel [06]
 limit nofile 4096 4096
 setuid perspective
 
-exec /usr/share/perspective/perspective-openstack/start.sh
+exec /usr/share/perspective/perspective-digital-ocean/start.sh

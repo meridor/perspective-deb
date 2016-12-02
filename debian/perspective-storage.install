@@ -1,3 +1,4 @@
+perspective-storage/start.sh usr/share/perspective/perspective-storage
 perspective-storage/target/lib usr/share/perspective/perspective-storage
 perspective-storage/target/perspective-storage.jar usr/share/perspective/perspective-storage
 etc/perspective/storage/storage.properties etc/perspective/storage

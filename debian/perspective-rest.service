@@ -1,0 +1,11 @@
+[Unit]
+Description=Perspective REST API
+
+[Service]
+Type=forking
+User perspective
+LimitNOFILE 4096
+ExecStart=/usr/share/perspective/perspective-rest/start.sh
+
+[Install]
+WantedBy=multi-user.target
