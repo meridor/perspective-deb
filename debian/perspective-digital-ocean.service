@@ -3,8 +3,8 @@ Description=Perspective Digital Ocean Worker
 
 [Service]
 Type=forking
-User perspective
-LimitNOFILE 4096
+User=perspective
+LimitNOFILE=4096
 ExecStart=/usr/share/perspective/perspective-digital-ocean/start.sh
 
 [Install]

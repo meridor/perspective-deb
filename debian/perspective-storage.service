@@ -3,8 +3,8 @@ Description=Perspective Storage
 
 [Service]
 Type=forking
-User perspective
-LimitNOFILE 4096
+User=perspective
+LimitNOFILE=4096
 ExecStart=/usr/share/perspective/perspective-storage/start.sh
 
 [Install]
