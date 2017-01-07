@@ -2,7 +2,7 @@
 Description=Perspective Digital Ocean Worker
 
 [Service]
-Type=forking
+Type=simple
 User=perspective
 LimitNOFILE=4096
 ExecStart=/usr/share/perspective/perspective-digital-ocean/start.sh

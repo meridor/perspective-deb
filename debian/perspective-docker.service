@@ -2,7 +2,7 @@
 Description=Perspective Docker Worker
 
 [Service]
-Type=forking
+Type=simple
 User=perspective
 LimitNOFILE=4096
 ExecStart=/usr/share/perspective/perspective-docker/start.sh

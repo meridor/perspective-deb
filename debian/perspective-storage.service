@@ -2,7 +2,7 @@
 Description=Perspective Storage
 
 [Service]
-Type=forking
+Type=simple
 User=perspective
 LimitNOFILE=4096
 ExecStart=/usr/share/perspective/perspective-storage/start.sh
