@@ -2,5 +2,5 @@ perspective-digital-ocean/start.sh usr/share/perspective/perspective-digital-oce
 perspective-digital-ocean/target/lib usr/share/perspective/perspective-digital-ocean
 perspective-digital-ocean/target/perspective-digital-ocean.jar usr/share/perspective/perspective-digital-ocean
 etc/perspective/digital-ocean/worker.properties etc/perspective/digital-ocean
-etc/perspective/digital-ocean/log4j.properties etc/perspective/digital-ocean
+etc/perspective/worker/log4j.properties etc/perspective/digital-ocean
 etc/perspective/worker/clouds.xml etc/perspective/digital-ocean

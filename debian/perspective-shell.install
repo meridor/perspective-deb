@@ -2,4 +2,4 @@ perspective-shell/target/lib usr/share/perspective/perspective-shell
 perspective-shell/target/perspective-shell.jar usr/share/perspective/perspective-shell
 perspective-shell/scripts/perspective usr/bin
 etc/perspective/shell/shell.properties etc/perspective/shell
-etc/perspective/shell/log4j.properties etc/perspective/shell
+etc/perspective/worker/log4j.properties etc/perspective/shell
