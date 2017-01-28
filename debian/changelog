@@ -1,3 +1,9 @@
+perspective-backend (1.3.4.1-1) xenial; urgency=medium
+
+  * Release 1.3.4.1
+
+ -- Krutov Ivan <vania-pooh@meridor.org>  Sat, 28 Dec 2017 11:41:19 +0300
+ 
 perspective-backend (1.3.4-1) xenial; urgency=medium
 
   * Release 1.3.4
